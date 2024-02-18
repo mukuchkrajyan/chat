@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket.IO Chat Example</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIC-UMVkhFZLt28XJJeBeu3rn9MZ63h_k"></script>
+
+	
+
+    <script src="/main.js"></script>
+</head>
+<body>
+<input type="hidden" name="location" id="location" long="" lat=""/>
+
+<input type="hidden" name="username" id="username" long="" lat=""/>
+
+<input type="hidden" name="index" id="index" long="" lat=""/>
+
+<div class="container mapSexion" style="display: none;">
+    <div id="map" style=""></div>
+</div>
+<div class="chatsAllSexion">
+    <div class="publicChatSexion">
+
+        <p class="chatSexionTitle" id="publicChatSexionTitle">Public Chat</p>
+
+        <ul class="pages">
+            <li class="chat page">
+                <div class="chatArea">
+                    <ul class="messages"></ul>
+                </div>
+                <input class="inputMessage publicMessage" placeholder="Type here..."/>
+            </li>
+            <li class="login page">
+                <div class="form">
+                    <h3 class="title">What's your nickname?</h3>
+                    <input class="usernameInput" type="text" maxlength="14"/>
+
+                    </br></br>
+                    <label class="statusLabel">Status(default:active)
+                        <input class="status" type="checkbox" value="1" style="">
+                    </label>
+                    <input id="continue" class="btn btn-success" type="button" value="Continue">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="chatConcret">
+
+        <p class="chatSexionTitle" id="ChatWithUserTitle">Chat with User</p>
+        <div class="ChatWithUserContent"></div>
+        <input class="ChatWithUserMessage" placeholder="Type here...">
+        <input id="sendUserMessage"type="button" value="Send">
+    </div>
+    <div class="privateChatSexion">
+
+        <p class="chatSexionTitle" id="privateChatSexionTitle">Private Chat</p>
+
+        <ul class="pagesPivate">
+            <div class="chatPivateArea">
+                <ul class="usersList"></ul>
+            </div>
+            <input class="inputMessage privteMessage" placeholder="Type here..."/>
+        </ul>
+    </div>
+
+</div>
+<script>
+    $(function () {
+
+    });
+</script>
+
+</body>
+</html>

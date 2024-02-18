@@ -1,0 +1,28 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+ 
+# Environment variables
+.env
+
+# Production build
+/build
+
+# Debug log files
+npm-debug.log*
+
+# Editor directories and files
+.vscode
+.idea
+
+# macOS
+.DS_Store
